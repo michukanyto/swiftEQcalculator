@@ -8,11 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,UITextFieldDelegate{
+    @IBOutlet weak var eqText: UITextField!
+    @IBOutlet weak var resultText: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        eqText.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        eqText.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let toParse = eqText.text;
+        //parse toParse
+        
+        let result = makeOperation(equation: toParse!)
+        resultText.text = result
+    }
+    
+    func makeOperation(equation : String) ->String{
+        let expn = NSExpression(format:equation)
+        let result:Int = expn.expressionValue(with: nil, context: nil) as! Int
+        let newString = String(result)
+        return newString
     }
 
 
