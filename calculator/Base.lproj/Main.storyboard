@@ -47,8 +47,13 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calcIOS" translatesAutoresizingMaskIntoConstraints="NO" id="9w2-Xy-7IE">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.79721510410308838" green="0.86332452297210693" blue="0.99604290723800659" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.031227493658661842" green="0.98729437589645386" blue="0.34470793604850769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YXN-LM-TwM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="gFC-dR-Gvo"/>
                             <constraint firstItem="YXN-LM-TwM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sL6-CZ-H3p"/>
@@ -65,4 +70,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="calcIOS" width="66.5" height="66.5"/>
+    </resources>
 </document>
