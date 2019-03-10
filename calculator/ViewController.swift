@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController,UITextFieldDelegate{
     @IBOutlet weak var eqText: UITextField!
     @IBOutlet weak var resultText: UITextField!
+    var toParse:String = ""
+    var result:String = ""
     
     
     
@@ -25,10 +27,10 @@ class ViewController: UIViewController,UITextFieldDelegate{
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let toParse = eqText.text;
+        toParse = eqText.text!;
         //parse toParse
         
-        let result = makeOperation(equation: toParse!)
+        result = makeOperation(equation: toParse)
         resultText.text = result
     }
     
@@ -38,7 +40,17 @@ class ViewController: UIViewController,UITextFieldDelegate{
         let newString = String(result)
         return newString
     }
+    
+    
 
-
+    @IBAction func calculate(_ sender: UIButton) {
+        toParse = eqText.text!;
+        //parse toParse
+        
+        result = makeOperation(equation: toParse)
+        resultText.text = result
+        
+    }
+    
 }
 
